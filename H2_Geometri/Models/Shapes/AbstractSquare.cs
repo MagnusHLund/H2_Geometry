@@ -1,18 +1,16 @@
 ﻿namespace H2_Geometri.Models.Shapes
 {
-	public abstract class AbstractSquare : AbstractShape
+	/// <summary>
+	/// This is the super class for the square shapes.
+	/// Each square has an _a field, which gets its value when a square is created.
+	/// </summary>
+	internal abstract class AbstractSquare : AbstractShape
 	{
-		private protected float _left;
-		private protected float _right;
-		private protected float _top;
-		private protected float _bottom;
+		protected float _a;
 
-		public AbstractSquare(float left, float right, float top, float bottom)
+		internal AbstractSquare(float a)
 		{
-			_left = left;
-			_right = right;
-			_top = top;
-			_bottom = bottom;
+			_a = a;
 		}
 	}
 }

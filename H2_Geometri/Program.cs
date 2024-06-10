@@ -9,6 +9,10 @@ namespace H2_Geometri
 {
 	internal class Program
 	{
+		/// <summary>
+		/// This method is the starting point of the application. 
+		/// It calls the MainController class' Main() method.
+		/// </summary>
 		static void Main()
 		{
 			new MainController().Main();

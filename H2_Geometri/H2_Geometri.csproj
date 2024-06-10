@@ -50,7 +50,7 @@
     <Compile Include="Models\Shapes\Squares\Rectangle.cs" />
     <Compile Include="Models\Shapes\Squares\Square.cs" />
     <Compile Include="Models\Shapes\AbstractSquare.cs" />
-    <Compile Include="Models\Shapes\Squares\Trapeze.cs" />
+    <Compile Include="Models\Shapes\Squares\IsoscelesTrapezoid.cs" />
     <Compile Include="Models\Shapes\AbstractTriangle.cs" />
     <Compile Include="Models\Shapes\Triangles\RightAngledTriangle.cs" />
     <Compile Include="Program.cs" />

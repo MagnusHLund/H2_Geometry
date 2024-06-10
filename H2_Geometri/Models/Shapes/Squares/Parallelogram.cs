@@ -1,29 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using H2_Geometri.Models.Shapes;
 
-namespace H2_Geometri.Models.shapes.Squares
+namespace H2_Geometri.Models.Shapes.Squares
 {
 	internal class Parallelogram : AbstractSquare
 	{
-		private int _b;
+		private float _b;
+		private float _v;
 
-		internal Parallelogram(int a, int b) : base (a){
+		public Parallelogram(float a, float b, float v) : base (a)
+		{
+			// Validates that the dimensions are all greater than 0. 
+			ValidateDimension(a, b, v);
+
 			_a = a;
 			_b = b;
+			_v = v;
 		}
 
-		internal override float CalculatePerimeter()
+		/// <summary>
+		/// Overrides the method to calculate the Perimeter for a parallelogram
+		/// </summary>
+		/// <returns>Float value of the perimeter</returns>
+		public override float CalculatePerimeter()
 		{
 			return 2*(_a + _b);
 		}
 
-		internal override float CalculateArea()
+		/// <summary>
+		/// Overrides the method to calculate the area for an parallelogram
+		/// </summary>
+		/// <returns>Float value of the area</returns>
+		public override float CalculateArea()
 		{
-			return (float)(_a * _b * Math.Sin(0));
+			float angleRadians = (float)(_v * Math.PI / 180);
+			return (float)(_a * _b * Math.Sin(angleRadians));
 		}
 	}
 }
